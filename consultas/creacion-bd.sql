@@ -1,9 +1,6 @@
 
 CREATE DATABASE Booking;
-=======
-CREATE DATABASE Hoteles;
-
-use Hoteles
+use Bookin
 
 CREATE Table Usuarios(
     id INT PRIMARY KEY AUTO_INCREMENT,
