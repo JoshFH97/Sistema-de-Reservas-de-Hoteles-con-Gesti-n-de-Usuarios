@@ -13,6 +13,23 @@ CREATE Table Usuarios(
   - Fecha de inicio
   - Fecha de fin
   - Estado (Activa/Cancelada)
+  CREATE Table Hoteles(
+    id PRIMARY KEY auto_increment not NULL INT,
+    numero_habitaciones INT,
+    ubicacion VARCHAR(100),
+    nombre VARCHAR(100),
+    descripcion TEXT
+);
+
+CREATE TABLE Habitaciones(
+    id PRIMARY key auto_increment not null,
+    hotel_id int,
+    tipo_habitacion varchar(50),
+    precio_noche int,
+    estado ENUM('Disponible', 'Ocupada'),
+    FOREIGN KEY (hotel_id) REFERENCES Hoteles(id)
+    
+)
 
 CREATE TABLE Reservas (
     id INT PRIMARY KEY AUTO_INCREMENT,
