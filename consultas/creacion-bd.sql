@@ -1,4 +1,8 @@
+
+CREATE DATABASE Booking;
+=======
 CREATE DATABASE Hoteles;
+
 use Hoteles
 
 CREATE Table Usuarios(
