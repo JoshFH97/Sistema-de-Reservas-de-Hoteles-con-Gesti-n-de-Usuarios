@@ -1,9 +1,6 @@
 
 CREATE DATABASE Booking;
-=======
-CREATE DATABASE Hoteles;
-
-use Hoteles
+use Bookin
 
 CREATE Table Usuarios(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -12,7 +9,24 @@ CREATE Table Usuarios(
     contraseña VARCHAR(50),
     tipo ENUM('Cliente','Administrador')
     ); 
+INSERT INTO Usuarios (nombre, email, contraseña, tipo) VALUES
+('Juan Perez', 'juan.perez@example.com', 'password123', 'Cliente'),
+('Maria Lopez', 'maria.lopez@example.com', 'password456', 'Cliente'),
+('Carlos Ramirez', 'carlos.ramirez@example.com', 'password789', 'Cliente'),
+('Laura Gomez', 'laura.gomez@example.com', 'password101', 'Cliente'),
+('Ana Martinez', 'ana.martinez@example.com', 'password202', 'Cliente'),
+('Luis Rodriguez', 'luis.rodriguez@example.com', 'password303', 'Cliente'),
+('Marta Sanchez', 'marta.sanchez@example.com', 'password404', 'Cliente'),
+('Jose Torres', 'jose.torres@example.com', 'password505', 'Cliente'),
+('Sofia Morales', 'sofia.morales@example.com', 'password606', 'Cliente'),
+('Pablo Fernandez', 'pablo.fernandez@example.com', 'password707', 'Cliente'),
+('Gloria Diaz', 'gloria.diaz@example.com', 'password808', 'Cliente'),
+('Raul Jimenez', 'raul.jimenez@example.com', 'password909', 'Cliente');
 
+INSERT INTO Usuarios (nombre, email, contraseña, tipo) VALUES
+('Admin 1', 'admin1@example.com', 'adminpassword1', 'Administrador'),
+('Admin 2', 'admin2@example.com', 'adminpassword2', 'Administrador'),
+('Admin 3', 'admin3@example.com', 'adminpassword3', 'Administrador');
 
 
 CREATE TABLE Hoteles (
