@@ -1,6 +1,6 @@
 
 CREATE DATABASE Booking;
-use Bookin
+use Booking
 
 CREATE Table Usuarios(
     id INT PRIMARY KEY AUTO_INCREMENT,
