@@ -10,15 +10,15 @@ GROUP BY Hoteles.id
 ORDER BY total_reservas DESC;
 
 -- -- Consulta para contar cuántas habitaciones disponibles hay en un hotel específico en una fecha dada.'
--- SELECT COUNT(Habitaciones.id) AS HabitacionesDisponibles
--- FROM Habitaciones
--- LEFT JOIN Reservas 
--- ON Habitaciones.id = Reservas.HabitacionId 
--- AND '2024-08-27' BETWEEN Reservas.Fecha_de_Inicio AND Reservas.Fecha_de_Fin
--- JOIN Hoteles 
--- ON Habitaciones.hotel_id = Hoteles.id
--- WHERE Hoteles.nombre = 'Nombre del Hotel'
--- AND (Reservas.HabitacionId IS NULL OR Habitaciones.estado = 'Disponible');
+SELECT COUNT(Habitaciones.id) AS HabitacionesDisponibles
+FROM Habitaciones
+INNER JOIN Reservas 
+ON Habitaciones.id = Reservas.HabitacionId 
+AND '2024-10-31' > `Reservas`.fecha_de_fin
+INNER JOIN Hoteles 
+ON Habitaciones.hotel_id = Hoteles.id
+AND (Reservas.HabitacionId IS NULL OR Habitaciones.estado = 'Disponible');
+
 
 
 
