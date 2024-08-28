@@ -9,7 +9,14 @@ JOIN Hoteles ON Habitaciones.hotel_id = Hoteles.id
 GROUP BY Hoteles.id
 ORDER BY total_reservas DESC;
 
--- Consulta para contar cuántas habitaciones disponibles hay en un hotel específico en una fecha dada.
+-- Consulta para contar cuántas habitaciones disponibles hay en un hotel específico en una fecha dada.'
+SELECT Hoteles.nombre, Reservas.HabitacionId, Habitaciones.estado
+FROM Reservas
+JOIN Habitaciones ON Reservas.HabitacionId = Habitaciones.id
+JOIN Hoteles ON Habitaciones.estado = Hoteles.id;
+
+
+
 -- Consulta para buscar hoteles por nombre.
 
 -- Consulta para buscar hoteles cuya ubicación comienza con un texto específico.
