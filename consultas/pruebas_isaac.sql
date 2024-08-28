@@ -13,3 +13,19 @@ WHERE
         SELECT id FROM Habitaciones WHERE hotel_id = 1
     );
 
+-- Consulta para identificar el hotel con la mayor ocupación en el mes anterior.
+SELECT Hoteles.nombre, COUNT(Reservas.id) AS total_reservas
+FROM Reservas
+JOIN Habitaciones ON Reservas.HabitacionId = Habitaciones.id
+JOIN Hoteles ON Habitaciones.hotel_id = Hoteles.id
+where Reservas.Fecha_de_Inicio<'2024-08-01'
+GROUP BY Hoteles.id
+ORDER BY total_reservas DESC;
+
+-- Consulta para listar los hoteles que tienen habitaciones disponibles pero no han sido reservadas en el último mes.
+
+SELECT Hoteles.nombre 
+from reservas
+JOIN Habitaciones on Reservas.HabitacionId=Habitaciones.id
+JOIN Hoteles on Habitaciones.hotel_id = Hoteles.id
+where `Fecha_de_Inicio` is null or `Fecha_de_Inicio`<'2024-08-01'
