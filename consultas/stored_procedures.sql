@@ -1,5 +1,4 @@
 DELIMITER //
-DELIMITER //
 
 CREATE PROCEDURE agregar_reserva(
     IN p_UsuarioId INT,
