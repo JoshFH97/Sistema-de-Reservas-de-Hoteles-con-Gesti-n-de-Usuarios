@@ -52,7 +52,4 @@ INSERT INTO Reservas (UsuarioId, HabitacionId, Fecha_de_Inicio, Fecha_de_Fin, Es
 (7, 4, '2024-08-05', '2024-08-10', 'Cancelada'),  -- Marta Sanchez en una Suite del Hotel Sol y Playa (Cancelada)
 (8, 6, '2024-09-10', '2024-09-15', 'Activa'),  -- Jose Torres en una Doble del Hotel Zapopan
 (9, 8, '2024-09-20', '2024-09-25', 'Activa'),  -- Sofia Morales en una Doble del Hotel Regio
-(10, 10, '2024-08-25', '2024-08-30', 'Activa'),  -- Pablo Fernandez en una Suite del Hotel Angelópolis
-(1, 1, '2024-09-01', '2024-09-05', 'Activa'),
-(2, 3, '2024-09-10', '2024-09-15', 'Activa'),
-(3, 3, '2024-07-10', '2024-07-15', 'Activa');
+(10, 10, '2024-08-25', '2024-08-30', 'Activa'); -- Pablo Fernandez en una Suite del Hotel Angelópolis

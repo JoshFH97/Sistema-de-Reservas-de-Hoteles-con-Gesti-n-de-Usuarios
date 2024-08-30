@@ -14,16 +14,7 @@ END //
 
 DELIMITER ;
 
-SELECT * FROM usuarios;
-SELECT * FROM habitaciones;
 CALL agregar_reserva(16, 12,'9998-12-12', '9999-12-12', 'Activa');
-
-
-SELECT * FROM reservas
-
-DROP Procedure agregar_reserva
-
-
 
 DELIMITER //
 
@@ -49,7 +40,3 @@ END //
 DELIMITER ;
 
 CALL cancelar_reserva(5)
-
-SELECT * FROM reservas
-
-DROP Procedure cancelar_reserva

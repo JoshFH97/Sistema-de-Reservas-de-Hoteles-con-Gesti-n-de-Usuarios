@@ -7,7 +7,7 @@ after INSERT on reservas
 for each row
 BEGIN
 UPDATE Habitaciones
-SET estado = 'Activa'
+SET estado = 'Ocupada'
 WHERE NEW.HabitacionId = Habitaciones.id;
 
 END;
@@ -30,5 +30,3 @@ BEGIN
     END IF;
 END//
 DELIMITER ;
-
-SHOW TRIGGERS
